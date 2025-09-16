@@ -1,7 +1,7 @@
 # 🕵️‍♂️ Collaborative YARA Rules
 
 🦦 **Welcome to the malware-hunting party** 
-- This repo is packed with handcrafted YARA rules built for dissecting digital nasties—created as part of the legendary FOR-350 course at Champlain College.
+- This repo is included YARA rules built for analyzing malware as part of the legendary, amazing, most-wonderful FOR-350 course at Champlain College taught by the incredibly intellecutal professer, Duane Dunston. 
 
 🔍 **What’s Inside?**  
 - YARA rules for basic malware analysis  
