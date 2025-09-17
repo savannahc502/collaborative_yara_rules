@@ -1,7 +1,7 @@
 rule DetectHTTP {
     meta:
         description = "Detects files containing any http/https URLs, Domains, and ports 8080,3389 & 22"
-        author = "Connor"
+        author = "Connor East"
         date = "2025-01-17"
     
     strings:
@@ -20,3 +20,4 @@ rule DetectHTTP {
     condition:
         any of them
 }
+
