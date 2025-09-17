@@ -6,5 +6,5 @@ rule pe_magic_number {
 	  author = "Savannah Ciak"
 	  date = "2025-9-17"
   condition:
-    pe.is_pe and unint16(0) != 0x5A4D // Checks that file is a PE file and if the header is not 'MZ'
+    pe.is_pe and uint16(0) != 0x5A4D // Checks that file is a PE file and if the header is not 'MZ'
 }
