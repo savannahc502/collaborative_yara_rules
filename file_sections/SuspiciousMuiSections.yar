@@ -6,8 +6,8 @@ rule SuspiciousMuiSectionCount {
         author = "Lily Pouliot"
         date = "9/18/2025"
     strings:
-        $mui_int1 = "MUILangName"
-        $mui_int2 = "MUIDisplayName"
+        $mui_int1 = "MUILangName" // Looking for extact text
+        $mui_int2 = "MUIDisplayName" 
         $mui_int3 = ".mui" nocase
     condition:
       uint16(0) == 0x5A4D and // MZ header check
