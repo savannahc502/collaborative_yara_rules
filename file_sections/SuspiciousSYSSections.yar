@@ -6,10 +6,10 @@ rule SuspiciousSYSSectionCount {
         author = "Lily Pouliot"
         date = "9/18/2025"
     strings:
-        $sys_int1 = ".sys" nocase
-        $sys_int2 = "ntoskrnl"
-        $sys_int3 = "DRIVER"
-        $sys_int3 = "DriverEntry"
+        $sys_int1 = ".sys" nocase 
+        $sys_int2 = "ntoskrnl" // Sys import functions from ntoskrnl.exe alot 
+        $sys_int3 = "DRIVER" // common string in driver files
+        $sys_int3 = "DriverEntry" // standard entry point function for windows drivers
     condition:
       uint16(0) == 0x5A4D and // MZ header check
       uint32(uint32(0x3C)) ==  0x00004550 and // Pe header checker
