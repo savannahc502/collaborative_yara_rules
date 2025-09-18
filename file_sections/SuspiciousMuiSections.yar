@@ -1,8 +1,8 @@
 import "pe"
 
-rule SuspiciousEXESectionCount {
+rule SuspiciousMuiSectionCount {
     meta:
-        description = "Checking mui specific files for less than 6 or more than 8 sections"
+        description = "Checking mui specific files for less than 2 sections"
         author = "Lily Pouliot"
         date = "9/18/2025"
     strings:
