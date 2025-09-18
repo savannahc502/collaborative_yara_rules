@@ -3,7 +3,7 @@ import "pe"
 rule SuspiciousSectionCount {
     meta:
         description = "Session Count Executable ++"
-        author = "Threat Hunter + Connor East"
+        author = "Threat Hunter + Connor East + Savannah"
         date = "2025-01-17"
     
     condition:
@@ -17,4 +17,5 @@ rule SuspiciousSectionCount {
             (pe.characteristics & pe.DLL)
         )
 }
+
 
