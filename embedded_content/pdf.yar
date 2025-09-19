@@ -2,7 +2,7 @@ rule ListPdf
 {
     meta:
         description = "Lists PDF's containing a valid PDF header and EOF marker"
-        author = "Connor East"
+        author = "Connor East and Savannah Ciak"
         date = "2025-01-17"
 
     strings:
@@ -13,3 +13,4 @@ rule ListPdf
         ($pdf_header at in (0..1024) or $pdf_header_text in(0..1024)) and $pdf_eof
         // Since some PDFs have junk at the start of the file, this searches for PDF headers within the first 1KB.
 }
+
