@@ -2,7 +2,7 @@ import "pe"
 
 rule SuspiciousMuiSectionCount {
     meta:
-        description = "Checking mui specific files for less than 2 sections"
+        description = "Checking mui specific files for more than 2 sections"
         author = "Lily Pouliot"
         date = "9/18/2025"
     strings:
