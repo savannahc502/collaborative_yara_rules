@@ -12,9 +12,11 @@ import "pe"
         $reg2 = "SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\RunOnce" ascii wide
         $service1 = "CreateService" ascii wide
         $service2 = "StartService" ascii wide
-
-condition: 
-   uint17(0) == 0x54AD and 
-   (1 of ($reg*) or 1 of ($service*)
-
+        $task1 = "Task Scheduler" ascii wide
+        $startup = "Startup" ascii wide
+        $autorun = "autorun.inf" ascii wide nocase
+        
+    condition:
+        uint16(0) == 0x5A4D and
+        (1 of ($reg*) or 1 of ($service*) or $task1 or $startup or $autorun)
 }
