@@ -9,7 +9,7 @@ rule SuspiciousDLLSectionCount {
         $dll_id1 = ".dll" nocase
         $dll_id2 = "LIBRARY" // common text in dll metadata
         $dll_id3 = "DllMain" // mandatory entry point in windows dll
-        $dll_id4 = "kernel32" // almost every windows dll imports this funtion
+        $dll_id4 = "kernel32" // almost every windows dll imports this function
         $dll_id5 = "DllEntryPoint" // alternate name for dll function
     condition:
       uint16(0) == 0x5A4D and // MZ header check
