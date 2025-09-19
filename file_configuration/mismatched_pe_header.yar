@@ -1,10 +1,12 @@
-import "pe" 
+// import "pe" // imports the PE module, not needed for this function
 
 rule pe_magic_number {
   meta:
-    description = "Searches for files that have a PE structure and flags if there if mismatched magic number" 
+    description = "Detects PE files with a tampered DOS header (missing MZ aka 0x5A4D)" 
 	author = "Savannah Ciak"
 	date = "2025-9-17"
   condition:
-    pe.is_pe and uint16(0) != 0x5A4D // Checks that file is a PE file and if the header is not 'MZ'
+	uint32(0x3C) < filesize and
+	uint32(uint32(0x3C)) == 0x00004550 and
+	uint16(0) != 0x5A4D
 }
