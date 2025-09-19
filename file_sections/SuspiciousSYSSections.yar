@@ -7,9 +7,9 @@ rule SuspiciousSYSSectionCount {
         date = "9/18/2025"
     strings:
         $sys_id1 = ".sys" nocase 
-        $sys_id2 = "ntoskrnl" // Sys import functions from ntoskrnl.exe alot 
+        $sys_id2 = "ntoskrnl" // Sys import functions from ntoskrnl.exe a lot 
         $sys_id3 = "DRIVER" // common string in driver files
-        $sys_id3 = "DriverEntry" // standard entry point function for windows drivers
+        $sys_id4 = "DriverEntry" // standard entry point function for windows drivers
     condition:
       uint16(0) == 0x5A4D and // MZ header check
       uint32(uint32(0x3C)) ==  0x00004550 and // Pe header checker
