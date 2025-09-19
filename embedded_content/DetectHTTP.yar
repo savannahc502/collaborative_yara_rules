@@ -18,6 +18,7 @@ rule DetectHTTP {
         $port22 = ":22"
     
     condition:
-        any of them
+        any of ($*)
 }
+
 
