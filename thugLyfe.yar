@@ -11,12 +11,15 @@ rule is_thugStylePacked { //dasuwerugwuerwq.exe
 		$upx2 = "UPX1"
 		$http = /ttps/  //need to append reg expression to allow for spaces
 		$installer = "setup.exe"
+		$string1 = "thug"
+		$string2 = "lyfe"
 	condition:
 		//hash.md5(0,filesize) == "92d6bf994b6dc42a8a491c75353f7c28" or //md5 hash check
 		(
 		any of ($upx*) and //UPX Packing
 		$http and // HTTP activity
-		$installer //install executable
+		$installer and //install executable
+		any of ($string*) //unique strings
 		)
 }
 
@@ -59,4 +62,5 @@ rule is_thugStyleDropper { //simplecalc.exe
 		
 		)
 }
+
 
