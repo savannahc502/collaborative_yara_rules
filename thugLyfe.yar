@@ -2,7 +2,7 @@ import "pe"
 import "hash"
 rule is_thugStylePacked { //dasuwerugwuerwq.exe
 	meta:
-		description = ""
+		description = "Detects the thugLyfe malicious file 'dasuwerugwuerwq.exe' which is a packed dropper"
 		author = "Eamon Stackpole"
 		editor = "N/A"
 		date = "2025-10-2"
@@ -22,7 +22,7 @@ rule is_thugStylePacked { //dasuwerugwuerwq.exe
 
 rule is_thugStyleEmbeddedPE { //setup.exe
 	meta:
-		description = ""
+		description = "Detects the thugLyfe malicious file 'setup.exe' which contains an embedded PE file"
 		author = "Eamon Stackpole"
 		editor = "N/A"
 		date = "2025-10-2"	
@@ -43,7 +43,7 @@ rule is_thugStyleEmbeddedPE { //setup.exe
 
 rule is_thugStyleDropper { //simplecalc.exe
 	meta:
-		description = ""
+		description = "Detects the thugLyfe malicious file 'simplecalc.exe', which is a dropper for the setup.exe file"
 		author = "Eamon Stackpole"
 		editor = "N/A"
 		date = "2025-10-02"
@@ -59,3 +59,4 @@ rule is_thugStyleDropper { //simplecalc.exe
 		
 		)
 }
+
