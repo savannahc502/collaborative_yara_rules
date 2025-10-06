@@ -1,0 +1,16 @@
+rule GIF_ImageChecker {
+    meta:
+        author = "Lily Pouliot"
+        date = "10/6/2025"
+        description = "Detects GIF file formats"
+        filetype = "GIF"
+
+    strings:
+        $GIF_Header_One = "GIF87a"
+        $GIF_Header_Two = "GIF89a"
+    
+
+    condition:
+        $GIF_header_One or  $GIF_Header_Two at 0
+
+}
