@@ -11,6 +11,6 @@ rule pdf_ImageTypeTest
 
 	condition: 
 		for any i in (0..1024) : ($pdf_header at i)
-		# This checks for %PDF anywhere in the first 1024 bytes.
+		// This checks for %PDF anywhere in the first 1024 bytes.
 }
 
