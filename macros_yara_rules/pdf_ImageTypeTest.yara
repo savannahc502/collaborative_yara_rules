@@ -10,6 +10,6 @@ description = "Detects PDF file format"
 		$pdf_header = "%PDF"
 
 	condition: 
-		$pdf_magic at 0
+		$pdf_header at 0
 }
 
