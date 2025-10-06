@@ -1,3 +1,4 @@
+// Needs testing
 rule HEIF_Imagechecker {
 	meta:
 		author = "Louis Mattiolo"
