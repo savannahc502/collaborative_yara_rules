@@ -10,6 +10,7 @@ description = "Detects PDF file format"
 		$pdf_header = "%PDF"
 
 	condition: 
-		$pdf_header at 0
+		for any i in (0..1024) : ($pdf_header at i)
+		# This checks for %PDF anywhere in the first 1024 bytes.
 }
 
