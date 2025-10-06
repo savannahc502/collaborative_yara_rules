@@ -1,3 +1,4 @@
+// Needs to be tested
 rule GIF_ImageChecker {
     meta:
         author = "Lily Pouliot"
