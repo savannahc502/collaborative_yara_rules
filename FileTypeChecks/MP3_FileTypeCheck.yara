@@ -14,4 +14,4 @@ strings:
 
 condition: 
 	any of ($mp3_header*) or $id3_tag at 0
-
+}
