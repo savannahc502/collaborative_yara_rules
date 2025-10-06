@@ -8,6 +8,7 @@ rule DetectWAV{
 	strings:
 		$wav_header = { 52 49 46 46 }
 		$wav_extension = ".wav"
+	
 	condition:
 		$wav_header and $wav_extension
 }
