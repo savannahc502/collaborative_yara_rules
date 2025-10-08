@@ -3,7 +3,7 @@ rule WebP_ImageChecker {
     meta:
         author = "Lily Pouliot" 
         date = "10/6/2025"
-        description = "Detects WebP file formats" 
+        description = "Detects WebP file formats using hex identifiers" 
         filetype = "WebP"
 
     strings:
