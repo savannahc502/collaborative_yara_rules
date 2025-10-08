@@ -4,7 +4,7 @@ rule JPEG_ImageChecker
 	meta:
 		author = "Cameron"
 		date = "10/06/25"
-		description = "Detects JPEG formatted Files"
+		description = "Detects JPEG formatted Files using hex identifiers"
 		filetype =  "JPEG"
 
 	strings:
