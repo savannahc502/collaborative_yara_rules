@@ -1,7 +1,7 @@
 // Needs testing
 rule DetectWAV{
 	meta:
-		description = "Detects .wav files"
+		description = "Detects .wav files using headers and other hex identifiers"
 		author = "Connor"
 		date = "2025-10-06"
 
