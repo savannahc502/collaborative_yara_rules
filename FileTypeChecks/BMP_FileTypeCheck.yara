@@ -3,7 +3,7 @@ rule BMP_ImageChecker {
     meta:
         author = "Lily Pouliot" 
         date = "10/6/2025"
-        description = "Detects BMP file formats"
+        description = "Detects BMP file formats headers and other hex identifiers"
         filetype = "BMP"
 
     strings:
