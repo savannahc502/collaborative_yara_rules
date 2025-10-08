@@ -3,7 +3,7 @@ rule SVG_ImageTypeTest
 	meta:
 		author = "Savannah Ciak"
 		date = "6 October 2025"
-    description = "Detects SVG file format"
+    description = "Detects SVG file format using file headers"
 		filetype = "SVG"
 
 	strings: 
