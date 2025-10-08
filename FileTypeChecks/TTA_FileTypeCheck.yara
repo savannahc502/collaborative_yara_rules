@@ -1,6 +1,6 @@
 rule DetectTTA {
 	meta:
-		description = "Detects .tta files"
+		description = "Detects .tta files using headers and other hex identifiers"
 		author = "Connor"
 		date = "2025-10-06"
 
