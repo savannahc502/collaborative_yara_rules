@@ -3,7 +3,7 @@ rule PNG_Checker
 	meta:
 		author = "Cameron"
 		date = "10/06/25"
-		description = "Detects PNG"
+		description = "Detects PNG  using  hex identifiers"
 		filetype =  "PNG"
 
 	strings:
