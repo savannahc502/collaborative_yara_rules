@@ -3,7 +3,7 @@ rule GIF_ImageChecker {
     meta:
         author = "Lily Pouliot"
         date = "10/6/2025"
-        description = "Detects GIF file formats"
+        description = "Detects GIF file formats using the file header"
         filetype = "GIF"
 
     strings:
