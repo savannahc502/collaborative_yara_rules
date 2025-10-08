@@ -1,6 +1,6 @@
 rule DetectWMA {
 	meta:
-		description = "Detects .wma files"
+		description = "Detects .wma files using headers and other hex identifiers"
 		author = "Connor"
 		date = "2025-10-06"
 
