@@ -3,7 +3,7 @@ rule is_AAC_File {
 meta:
 		description = "Detects AAC file using file headers"
     author = "Eamon Stackpole"
-		editors = "N/A"
+		editors = "Lily Pouliot"
 		date = "2025-10-6"
 		
 	strings:
@@ -11,6 +11,6 @@ meta:
 		$header2 = { FF F9 }
 	
   condition:
-		$header*
+		$header1 or $header2
 
 }
