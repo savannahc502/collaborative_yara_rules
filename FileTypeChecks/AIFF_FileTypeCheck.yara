@@ -3,7 +3,7 @@ rule is_AIFF_File {
 meta:
 		description = "Detects AIFF file using headers and other hex identifiers"
     author = "Eamon Stackpole"
-		editors = "N/A"
+		editors = "Lily Pouliot"
 		date = "2025-10-6"
 		
 	strings:
@@ -14,9 +14,8 @@ meta:
 		$version = "FVER"
 	
   condition:
-		($header at 0) and 
-    $metadata and
-    $version and
-    $variant*
+	$header at 0 and 
+    ($variant1 in (8..12) or $variant2 in (8..12)) and
+	$metadata
 
 }
