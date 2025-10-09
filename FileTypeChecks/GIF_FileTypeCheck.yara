@@ -2,6 +2,7 @@
 rule GIF_ImageChecker {
     meta:
         author = "Lily Pouliot"
+        editors = "Lily Pouliot"
         date = "10/6/2025"
         description = "Detects GIF file formats using the file header"
         filetype = "GIF"
@@ -12,6 +13,6 @@ rule GIF_ImageChecker {
     
 
     condition:
-        $GIF_header_One or  $GIF_Header_Two at 0
+        $GIF_Header_One or  $GIF_Header_Two at 0
 
 }
