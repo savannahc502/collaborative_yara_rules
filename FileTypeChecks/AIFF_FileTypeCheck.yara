@@ -15,7 +15,7 @@ meta:
 	
   condition:
 	$header at 0 and 
-    ($variant1 at 8 or $variant2 at 8 and
+    ($variant1 at 8 or $variant2 at 8) and
 	$metadata
 	$version
 
