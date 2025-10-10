@@ -7,7 +7,7 @@ author = "Eamon Stackpole"
 		date = "2025-10-6"
 		
 	strings:
-		$header1 = { 38 42 50 53 }
+		$header = { 38 42 50 53 }
 	condition:
 		$header at 0
 
