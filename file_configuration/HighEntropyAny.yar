@@ -4,7 +4,7 @@ import "math"
 rule HighEntropySection
 {
     meta:
-        description = "Detects sections with high entropy"
+        description = "Detects sections with high entropy that contain .rsrc and .reloc"
         author = "Threat Hunter + Eamon Stackpole + Savannah Ciak + Connor East"
         editor = "Cameron Jalbert"
         date = "2025-10-09"
