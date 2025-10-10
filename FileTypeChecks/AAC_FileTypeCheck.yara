@@ -11,6 +11,6 @@ meta:
 		$header2 = { FF F9 }
 	
   condition:
-		$header1 or $header2
+		($header1 at 0) or ($header2 at 0)
 
 }
