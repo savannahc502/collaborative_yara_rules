@@ -12,6 +12,6 @@ rule WebP_ImageChecker {
         
 
     condition:
-        $WebP_Header_RIFF at 0 and $WebP_Header_WEBP at 8
+        $WebP_Header_RIFF at 0 and $WebP_Header_WEBP at 0
       
 }
