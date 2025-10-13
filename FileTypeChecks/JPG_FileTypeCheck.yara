@@ -7,7 +7,7 @@ rule JPG_ImageTypeTest
 		filetype = "JPG"
 
 	strings: 
-		$jpg_magic = { FF D8 FF }
+		$jpg_magic = { FF D8 FF E8 }
 
 	condition: 
 		for any i in (0..1024) : ($jpg_magic at i)
