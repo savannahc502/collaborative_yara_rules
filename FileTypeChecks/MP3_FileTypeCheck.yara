@@ -9,6 +9,7 @@ strings:
 
 	$mp3_header1 = { FF FB } //mpeg-1 layer 3 header common mp3 format
 	$mp3_header2 = { FF F3} //mpeg-2 layer 3 lower sample rate 
+    $mp3_header3 = { 49 44 33 } // MP3 MPEG-1 Audio Layer 3 (MP3) audio file
 	$id3_tag = "ID3" ascii wide // metadata artist, title, etc 
 
 
