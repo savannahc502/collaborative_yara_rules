@@ -9,13 +9,13 @@ rule is_Downloader2 { //image_downloader.exe
 		$ip = "165.73.244.11"
 		$image = "frontpage.jpg"
 		$ft_pe = { 4D 5A }
-		$ft_mp3 = { FF FB }
+		//$ft_mp3 = { FF FB }
 	condition:
 		$name and 
 		$ip and
 		$image and
-		$ft_pe at 0 and
-		$ft_mp3
+		$ft_pe at 0 
+		//$ft_mp3
 }
 
 rule is_OfficeAutoOpen { //SecurityAdvisory.docm
@@ -34,22 +34,41 @@ rule is_OfficeAutoOpen { //SecurityAdvisory.docm
 		all of ($vba*)
 }
 
-rule is_Packed2 { //Volt.wav
+//rule is_Packed2 { //Volt.wav
+//	meta:
+//		description = "Detects Packed file using a unique string, packer headers, file headers, and file trailers"
+//		author = "Eamon Stackpole"
+//		editor = "N/A"
+//		date = "2025-10-09"
+//	strings:
+//		$packer = "SR"
+//		$ft_jpeg = { FF D8 FF }
+//		$tr_jpeg = { FF D9 }
+//		//$ft_bm = { 42 4D }
+//		$string = "Google"
+//	condition:
+//		$string and
+//		$packer and
+//		$ft_jpeg at 0 and
+//		$tr_jpeg at (filesize -2)
+//		//$ft_bm
+//}
+rule is_based64 { //frontpage.jpg
 	meta:
-		description = "Detects Packed file using a unique string, packer headers, file headers, and file trailers"
+		description = "Detects Encoded File using its file headers, command structure, unique IP address, and filepath"
 		author = "Eamon Stackpole"
 		editor = "N/A"
-		date = "2025-10-09"
+		date = "2025-10-12"	
 	strings:
-		$packer = "SR"
 		$ft_jpeg = { FF D8 FF }
 		$tr_jpeg = { FF D9 }
-		$ft_bm = { 42 4D }
-		$string = "Google"
+		$command = "cmd /c powershell invoke-webrequest -uri" base64
+		$address = "'http://108.181.155.31/asefa.bat'" base64 
+		$path = "'c:\\programdata\\asefa.bat'" base64
 	condition:
-		$string and
-		$packer and
-		$ft_jpeg at 0 and
-		$tr_jpeg at (filesize -2) and
-		$ft_bm
+		($ft_jpeg and $tr_jpeg) and
+		$command and 
+		$address and 
+		$path
+
 }
