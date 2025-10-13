@@ -12,6 +12,6 @@ rule BMP_ImageChecker {
         
 
     condition:
-         $BMP_Header_one or $BMP_Header_two at 0
+         $BMP_Header_one at 0 or $BMP_Header_two at 0
       
 }
