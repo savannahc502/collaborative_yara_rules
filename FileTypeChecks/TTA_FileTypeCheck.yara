@@ -8,5 +8,5 @@ rule DetectTTA {
 		$tta_header = { 54 54 51 }
 		$tta_extension = ".tta"
 	condition:
-		$tta_header and $tta_extension
+		$tta_header at 0 or $tta_extension at 0
 }
