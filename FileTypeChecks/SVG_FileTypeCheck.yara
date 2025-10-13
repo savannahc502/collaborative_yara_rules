@@ -10,5 +10,5 @@ rule SVG_ImageTypeTest
 		$svg_tag = "<svg"
 
 	condition: 
-		$svg_tag
+		$svg_tag at 0
 }
