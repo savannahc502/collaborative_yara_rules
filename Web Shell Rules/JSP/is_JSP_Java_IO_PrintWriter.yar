@@ -1,6 +1,6 @@
 rule is_JSP_Java_IO_PrintWriter {
 	meta:
-		description = "Detects the use of JSP new java.io.PrintWriter( function "
+		description = "Detects the use of the JSP new java.io.PrintWriter( function "
 		author = "Eamon Stackpole"
 		editor = "N/A"
 		version = "1.0"
@@ -9,6 +9,7 @@ rule is_JSP_Java_IO_PrintWriter {
 		$func = "new java.io.PrintWriter("
 	condition:
 		$func
+
 
 
 }
