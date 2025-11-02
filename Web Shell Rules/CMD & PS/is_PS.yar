@@ -1,6 +1,6 @@
 rule is_PS {
 	meta:
-		description = "Detects the use of powershell alias"
+		description = "Detects the use of the powershell alias"
 		author = "Eamon Stackpole"
 		editor = "N/A"
 		version = "1.0"
@@ -9,6 +9,7 @@ rule is_PS {
 		$file = "powershell"
 	condition:
 		$file
+
 
 
 }
