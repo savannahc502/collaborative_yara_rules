@@ -1,6 +1,6 @@
 rule is_NodeJS_Require_Run_New_Context {
 	meta:
-		description = "Detects the use of NodeJS require('vm').runInNewContext( function"
+		description = "Detects the use of the NodeJS require('vm').runInNewContext( function"
 		author = "Eamon Stackpole"
 		editor = "N/A"
 		version = "1.0"
@@ -9,6 +9,7 @@ rule is_NodeJS_Require_Run_New_Context {
 		$func = "require('vm').runInNewContext("
 	condition:
 		$func
+
 
 
 }
