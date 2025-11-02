@@ -1,6 +1,6 @@
 rule is_JSP_Include {
 	meta:
-		description = "Detects the use of JSP jsp:include function which is used for inserting another resource into a page's response"
+		description = "Detects the use of the JSP jsp:include function which is used for inserting another resource into a page's response"
 		author = "Eamon Stackpole"
 		editor = "N/A"
 		version = "1.0"
@@ -9,6 +9,7 @@ rule is_JSP_Include {
 		$func = "jsp:include"
 	condition:
 		$func
+
 
 
 }
