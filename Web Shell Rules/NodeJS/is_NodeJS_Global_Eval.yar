@@ -1,6 +1,6 @@
 rule is_NodeJS_Global_Eval {
 	meta:
-		description = "Detects the use of NodeJS global.eval( function"
+		description = "Detects the use of the NodeJS global.eval( function"
 		author = "Eamon Stackpole"
 		editor = "N/A"
 		version = "1.0"
@@ -9,6 +9,7 @@ rule is_NodeJS_Global_Eval {
 		$func = "global.eval("
 	condition:
 		$func
+
 
 
 }
