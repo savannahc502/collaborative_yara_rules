@@ -1,6 +1,6 @@
 rule is_JSP_Runtime_GetRuntime_Exec {
 	meta:
-		description = "Detects the use of JSP RunTime.getRuntime(.exec( function"
+		description = "Detects the use of the JSP RunTime.getRuntime().exec( function"
 		author = "Eamon Stackpole"
 		editor = "N/A"
 		version = "1.0"
@@ -9,6 +9,7 @@ rule is_JSP_Runtime_GetRuntime_Exec {
 		$func = "Runtime.getRuntime().exec("
 	condition:
 		$func
+
 
 
 }
