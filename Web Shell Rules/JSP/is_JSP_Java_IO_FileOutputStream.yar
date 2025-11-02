@@ -6,9 +6,10 @@ rule is_JSP_Java_IO_FileOutputStream {
 		version = "1.0"
 		date = "11/1/2025"
 	strings:
-		$func = "new java.io.FileOutputStream(("
+		$func = "new java.io.FileOutputStream("
 	condition:
 		$func
+
 
 
 }
