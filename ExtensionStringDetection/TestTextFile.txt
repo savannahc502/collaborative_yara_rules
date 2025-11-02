@@ -1,0 +1,1 @@
+.pif .lnk .exe .docx .xlsx .pptx .pdf .rar .7z .zip .dll .rtf .html .htm
