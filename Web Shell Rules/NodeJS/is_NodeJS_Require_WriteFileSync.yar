@@ -1,0 +1,14 @@
+rule is_NodeJS_Require_WriteFileSync {
+	meta:
+		description = "Detects the use of NodeJS require('fs').writeFileSync( function"
+		author = "Eamon Stackpole"
+		editor = "N/A"
+		version = "1.0"
+		date = "11/1/2025"
+	strings:
+		$func = "require('fs').writeFileSync("
+	condition:
+		$func
+
+
+}
