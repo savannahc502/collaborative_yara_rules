@@ -1,6 +1,6 @@
 rule is_NodeJS_Eval {
 	meta:
-		description = "Detects the use of NodeJS eval function"
+		description = "Detects the use of the NodeJS eval function"
 		author = "Eamon Stackpole"
 		editor = "N/A"
 		version = "1.0"
@@ -10,6 +10,7 @@ rule is_NodeJS_Eval {
 		$func = "eval("
 	condition:
 		$node and $func
+
 
 
 }
