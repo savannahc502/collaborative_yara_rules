@@ -6,7 +6,7 @@ rule is_PHP_Preg_Replace {
 		version = "1.0"
 		date = "11/1/2025"
 	strings:
-	    $func = "preg_replace(" //NEEDS /E CONDITION CHECK
+	    $func = /preg_replace\((\w+)\/e/ //checks for /e condition
 	condition:
       $func
 
