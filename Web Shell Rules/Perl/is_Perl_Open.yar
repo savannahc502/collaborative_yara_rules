@@ -7,9 +7,10 @@ rule is_Perl_Open {
 		date = "11/1/2025"
 	strings:
 	    //$tag = "#!/usr/bin/perl"
-		$func = "open(" // with pipe (e.g., open(File, "command |"))
+		$func = /open\((\w+), \"(\w+)\|\"/ // with pipe (e.g., open(File, "command |"))
 	condition:
       //$tag and 
 	  $func
+
 
 }
