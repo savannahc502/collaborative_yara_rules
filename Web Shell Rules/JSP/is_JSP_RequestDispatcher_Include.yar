@@ -1,6 +1,6 @@
 rule is_JSP_RequestDispatcher_Include {
 	meta:
-		description = "Detects the use of JSP request.getRequestDispatcher(.include( function "
+		description = "Detects the use of the JSP request.getRequestDispatcher().include( function "
 		author = "Eamon Stackpole"
 		editor = "N/A"
 		version = "1.0"
@@ -13,3 +13,4 @@ rule is_JSP_RequestDispatcher_Include {
 
 
 }
+
