@@ -1,6 +1,6 @@
 rule is_NodeJS_Require_ReadFile {
 	meta:
-		description = "Detects the use of NodeJS require('fs').readFile( function"
+		description = "Detects the use of the NodeJS require('fs').readFile( function"
 		author = "Eamon Stackpole"
 		editor = "N/A"
 		version = "1.0"
@@ -9,6 +9,7 @@ rule is_NodeJS_Require_ReadFile {
 		$func = "require('fs').readFile("
 	condition:
 		$func
+
 
 
 }
