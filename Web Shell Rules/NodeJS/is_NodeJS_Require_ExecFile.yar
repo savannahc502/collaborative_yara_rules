@@ -1,6 +1,6 @@
 rule is_NodeJS_Require_ExecFile {
 	meta:
-		description = "Detects the use of NodeJS require('child_process').execFile( function"
+		description = "Detects the use of the NodeJS require('child_process').execFile( function"
 		author = "Eamon Stackpole"
 		editor = "N/A"
 		version = "1.0"
@@ -9,6 +9,7 @@ rule is_NodeJS_Require_ExecFile {
 		$func = "require('child_process').execFile("
 	condition:
 		$func
+
 
 
 }
