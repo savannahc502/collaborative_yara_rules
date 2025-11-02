@@ -7,9 +7,11 @@ rule is_Perl_Fork {
 		date = "11/1/2025"
 	strings:
 	    //$tag = "#!/usr/bin/perl"
-		$func = "fork(" //combined with exec(
+		$func1 = "fork(" //combined with exec(
+		$func2 = "exec("
 	condition:
         //$tag and 
-		$func
+		$func1 and $func2
+
 
 }
