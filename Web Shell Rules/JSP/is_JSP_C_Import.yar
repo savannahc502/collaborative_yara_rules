@@ -1,6 +1,6 @@
 rule is_JSP_C_Import {
 	meta:
-		description = "Detects the use of JSP c:import function which is used for inclusion of URLS"
+		description = "Detects the use of the JSP c:import function which is used for inclusion of URLS"
 		author = "Eamon Stackpole"
 		editor = "N/A"
 		version = "1.0"
@@ -9,6 +9,7 @@ rule is_JSP_C_Import {
 		$func = "<c:import"
 	condition:
 		$func
+
 
 
 }
