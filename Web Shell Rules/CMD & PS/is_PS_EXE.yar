@@ -1,6 +1,6 @@
 rule is_PS_EXE {
 	meta:
-		description = "Detects the use of powershell.exe file"
+		description = "Detects the use of the powershell.exe file"
 		author = "Eamon Stackpole"
 		editor = "N/A"
 		version = "1.0"
@@ -9,6 +9,7 @@ rule is_PS_EXE {
 		$file = "powershell.exe"
 	condition:
 		$file
+
 
 
 }
