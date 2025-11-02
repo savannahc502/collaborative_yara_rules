@@ -1,6 +1,6 @@
 rule is_JSP_PageContext_Include {
 	meta:
-		description = "Detects the use of JSP pageContext.include( function "
+		description = "Detects the use of the JSP pageContext.include( function "
 		author = "Eamon Stackpole"
 		editor = "N/A"
 		version = "1.0"
@@ -9,6 +9,7 @@ rule is_JSP_PageContext_Include {
 		$func = "pageContext.include("
 	condition:
 		$func
+
 
 
 }
