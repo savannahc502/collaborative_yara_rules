@@ -1,6 +1,6 @@
 rule is_NodeJS_Require_ExecSync {
 	meta:
-		description = "Detects the use of NodeJS require('child_process').execSync( function"
+		description = "Detects the use of the NodeJS require('child_process').execSync( function"
 		author = "Eamon Stackpole"
 		editor = "N/A"
 		version = "1.0"
@@ -9,6 +9,7 @@ rule is_NodeJS_Require_ExecSync {
 		$func = "require('child_process').execSync("
 	condition:
 		$func
+
 
 
 }
