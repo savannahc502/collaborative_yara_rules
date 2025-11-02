@@ -7,10 +7,11 @@ rule is_Perl_Backticks {
 		date = "11/1/2025"
 	strings:
 	    $tag = "#!/usr/bin/perl"
-		$func = "`"
+		$func = /`(\w+)`/
 	condition:
         $tag and 
 		$func
 
 
 }
+
