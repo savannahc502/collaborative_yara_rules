@@ -1,6 +1,6 @@
 rule is_NodeJS_Require_ReadFileSync {
 	meta:
-		description = "Detects the use of NodeJS require('fs').readFileSync( function"
+		description = "Detects the use of the NodeJS require('fs').readFileSync( function"
 		author = "Eamon Stackpole"
 		editor = "N/A"
 		version = "1.0"
@@ -9,6 +9,7 @@ rule is_NodeJS_Require_ReadFileSync {
 		$func = "require('fs').readFileSync("
 	condition:
 		$func
+
 
 
 }
