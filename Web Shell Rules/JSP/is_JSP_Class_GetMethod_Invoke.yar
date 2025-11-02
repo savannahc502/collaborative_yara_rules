@@ -6,9 +6,10 @@ rule is_JSP_Class_GetMethod_Invoke {
 		version = "1.0"
 		date = "11/1/2025"
 	strings:
-		$func = "Class.forName(.getMethod(.invoke("
+		$func = "Class.forName(.getMethod().invoke("
 	condition:
 		$func
+
 
 
 }
