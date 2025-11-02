@@ -10,5 +10,6 @@ rule lolbin_wmic
         $createdir1 = { 43 72 65 61 74 65 44 69 72 65 63 74 6F 72 79 }
         $createdir2 = "43 72 65 61 74 65 44 69 72 65 63 74 6F 72 79"
     condition:
-        (any of (cmd*)) and (any of (createdir*))
+        (any of ($cmd*)) and (any of ($createdir*))
+
 }
