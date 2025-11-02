@@ -7,11 +7,11 @@ rule pdf_ImageTypeTest
 		filetype = "PDF"
 
 	strings: 
-		$pdf_header = "%PDF"
+		$pdf_header1 = "%PDF"
 		$pdf_header2 = "25 50 44 46"
 
 	condition: 
-		for any i in (0..1024) : ($pdf_header* at i)
+		($pdf_header*) at 0
 		// This checks for %PDF anywhere in the first 1024 bytes.
 }
 
