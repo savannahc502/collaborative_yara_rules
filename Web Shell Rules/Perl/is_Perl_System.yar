@@ -6,8 +6,9 @@ rule is_Perl_System {
 		version = "1.0"
 		date = "11/1/2025"
 	strings:
-	    $func = "system("
+	    $tag = "#!/usr/bin/perl"
+		$func = "system("
 	condition:
-      $func
+      $tag and $func
 
 }
