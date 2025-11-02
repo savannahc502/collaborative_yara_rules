@@ -1,6 +1,6 @@
 rule is_NodeJS_Require_CreateWriteStream {
 	meta:
-		description = "Detects the use of NodeJS require('fs').createWriteStream( function"
+		description = "Detects the use of the NodeJS require('fs').createWriteStream( function"
 		author = "Eamon Stackpole"
 		editor = "N/A"
 		version = "1.0"
@@ -9,6 +9,7 @@ rule is_NodeJS_Require_CreateWriteStream {
 		$func = "require('fs').createWriteStream("
 	condition:
 		$func
+
 
 
 }
