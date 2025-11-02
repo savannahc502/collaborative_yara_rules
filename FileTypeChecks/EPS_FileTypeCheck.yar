@@ -11,4 +11,3 @@ rule EPS_FileTypeCheck
         
     condition:
         $ps at 0 and $eps
-}
