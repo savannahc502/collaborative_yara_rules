@@ -6,9 +6,10 @@ rule is_JSP_RequestDispatcher_Include {
 		version = "1.0"
 		date = "11/1/2025"
 	strings:
-		$func = "request.getRequestDispatcher(.include("
+		$func = "request.getRequestDispatcher().include("
 	condition:
 		$func
+
 
 
 }
