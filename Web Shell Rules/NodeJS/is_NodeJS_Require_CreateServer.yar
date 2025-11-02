@@ -1,6 +1,6 @@
 rule is_NodeJS_Require_CreateServer {
 	meta:
-		description = "Detects the use of NodeJS require('http').createServer( function, which is used for reverse shells"
+		description = "Detects the use of the NodeJS require('http').createServer( function, which is used for reverse shells"
 		author = "Eamon Stackpole"
 		editor = "N/A"
 		version = "1.0"
@@ -9,6 +9,7 @@ rule is_NodeJS_Require_CreateServer {
 		$func = "require('http').createServer("
 	condition:
 		$func
+
 
 
 }
