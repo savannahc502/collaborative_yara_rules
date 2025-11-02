@@ -1,6 +1,6 @@
 rule is_JSP_Class_GetMethod_Invoke {
 	meta:
-		description = "Detects the use of JSP Class.forName(.getMethod(.invoke( function "
+		description = "Detects the use of the JSP Class.forName().getMethod().invoke( function "
 		author = "Eamon Stackpole"
 		editor = "N/A"
 		version = "1.0"
@@ -13,4 +13,5 @@ rule is_JSP_Class_GetMethod_Invoke {
 
 
 }
+
 
