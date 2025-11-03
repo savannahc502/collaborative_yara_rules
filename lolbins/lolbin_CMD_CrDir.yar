@@ -1,8 +1,9 @@
-rule lolbin_wmic
+rule lolbin_cmd_crdir
 {
     meta:
-        description = "Detects hex encoded wmic content"
+        description = "Detects hex encoded cmd and CreateDirectory content"
         author = "Connor East"
+        editor = "Eamon Stackpole"
         date = "02/11/25"  
     strings:
         $cmd1 = { 63 6D 64 2E 65 78 65 }
@@ -13,3 +14,4 @@ rule lolbin_wmic
         (any of ($cmd*)) and (any of ($createdir*))
 
 }
+
