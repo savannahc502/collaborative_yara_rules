@@ -1,6 +1,6 @@
 rule password_access {
     meta:
-        description = "Checks for indicators of Cron Job creation"
+        description = "Checks for indicators of password file access"
         author = "Eamon Stackpole"
         editor = "N/A"
         version = "1.0"
@@ -14,7 +14,6 @@ rule password_access {
     condition:
        uint32(0) == 0x464c457f and
        (
-          $command1 and
-          ($command2 and $persist)
+        any of ($command*) and any of ($path*)
        ) 
 }
