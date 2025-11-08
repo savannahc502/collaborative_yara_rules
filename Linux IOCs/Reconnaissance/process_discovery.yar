@@ -8,7 +8,7 @@ rule process_discovery {
         
     strings:
         $command1 = "strlen(" ascii
-        $ps = /ps [aux]/
+        $ps = /ps [aux]/ ascii
     condition:
        uint32(0) == 0x464c457f and
        (
