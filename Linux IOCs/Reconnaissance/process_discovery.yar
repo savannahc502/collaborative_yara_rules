@@ -1,6 +1,6 @@
 rule process_discovery {
     meta:
-        description = "checks for indicators of process discovery"
+        description = "Checks for indicators of process discovery"
         author = "Eamon Stackpole"
         editor = "N/A"
         version = "1.0"
