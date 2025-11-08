@@ -1,6 +1,6 @@
 rule hostname_discovery {
     meta:
-        description = "checks for indicators of hostname discovery"
+        description = "Checks for indicators of hostname discovery"
         author = "Eamon Stackpole"
         editor = "N/A"
         version = "1.0"
