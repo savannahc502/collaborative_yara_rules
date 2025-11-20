@@ -1,0 +1,1 @@
+This folder, "sample1_campaign_detection," contains Yara rules made specifically to target sample malware from the Champlain College FOR-350 "Performing a Dynamic Malware Analysis" assignment. The campaign is titled "Sample1."
