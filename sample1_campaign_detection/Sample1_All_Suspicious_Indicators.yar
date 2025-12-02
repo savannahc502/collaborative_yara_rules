@@ -2,7 +2,7 @@
 rule Sample1_All_Suspicious_Indicators {
     meta:
         description = "Detects Sample1 malware by all suspicious indicators"
-        author = "Connor East"
+        author = "Connor East, Edited by Savannah Ciak"
         date = "11/20/2025"
         severity = "critical"
         malware_family = "XMRig Cryptominer with Data Theft"
@@ -73,4 +73,5 @@ rule Sample1_All_Suspicious_Indicators {
             (1 of ($mining*) and 1 of ($persist*) and 1 of ($hidden*)) or
             (1 of ($collect*) and 1 of ($hidden*) and 1 of ($exec*))
         )
+
 }
